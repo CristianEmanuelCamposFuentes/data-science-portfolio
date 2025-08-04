@@ -1,0 +1,9 @@
+# general
+*.ipynb_checkpoints/
+.DS_Store
+.env
+# datos grandes
+*.zip
+*.tar
+*.parquet
+data/**/raw/
