@@ -6,6 +6,31 @@ Análisis exploratorio para entender cómo varían las puntuaciones de **usuario
 
 ---
 
+
+## 🔍 Highlights en una mirada
+
+<p align="center">
+  <img src="./figures/fig_corr_matrix.PNG" alt="Matriz de correlación de variables" width="45%" />
+  <img src="./figures/fig_distribution_userscore.PNG" alt="Distribución de userScore" width="49%" />
+</p>
+<p align="center">
+  <em>Izq: correlaciones entre variables clave. Der: distribución de userScore.</em>
+</p>
+
+<p align="center">
+  <img src="./figures/fig_platform_counts.PNG" alt="Cantidad de juegos por plataforma" width="49%" />
+  <img src="./figures/fig_boxplot_userscore_by_platform.PNG" alt="userScore por plataforma (boxplot)" width="49%" />
+</p>
+<p align="center">
+  <em>Izq: representación por plataforma. Der: diferencias de userScore por plataforma.</em>
+</p>
+
+---
+
+## 📁 Notebook
+- Colab (completo): **[abrir](https://colab.research.google.com/drive/1G7AOSqC__0ZdLgQukFz7aPO9bBeicFIV)**
+- Carpeta con notebooks: [`./notebooks/`](./notebooks/)
+
 ## Objetivos
 
 - Explorar la distribución de **userScore** y **metascore**.  
