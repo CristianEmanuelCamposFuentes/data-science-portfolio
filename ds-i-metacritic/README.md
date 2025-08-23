@@ -59,18 +59,6 @@ Análisis exploratorio para entender cómo varían las puntuaciones de **usuario
 
 ---
 
-## Figuras (sugeridas)
-
-Guárdalas en `figures/`:
-
-- `fig_distribution_userscore.png`
-- `fig_platform_counts.png`
-- `fig_boxplot_userscore_by_platform.png`
-- `fig_scatter_metascore_userscore.png`
-- `fig_corr_matrix.png`
-
----
-
 ## Cómo ejecutar
 
 ```bash
