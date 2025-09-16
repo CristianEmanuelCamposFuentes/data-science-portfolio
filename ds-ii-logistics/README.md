@@ -80,5 +80,39 @@ Análisis exploratorio y primeros modelos para **predecir riesgo de retraso** y 
 
 ```bash
 pip install -U pandas numpy scikit-learn matplotlib seaborn xgboost
-# abrir notebooks/ProyectoDSIIParteII...ipynb
-# o usar el badge de Colab de arriba.
+```
+
+## Estructura
+```
+ds-ii-logistics/
+├─ data/
+│  └─ dynamic_supply_chain_logistics_dataset.csv
+├─ figures/
+│  ├─ fig_risk_counts.png
+│  ├─ fig_violin_delay_by_risk.png
+│  ├─ fig_scatter_congestion_vs_deviation.png
+│  └─ fig_corr_matrix_logistics.png
+├─ notebooks/
+│  └─ ProyectoDSIIParteII....ipynb
+└─ README.md
+```
+
+
+**Próximos pasos**:
+
+- Features de tiempo (hour/dayofweek/season) y lags de congestión/ETA.
+
+- Calibración de probabilidades y threshold tuning para alertas.
+
+- Monitoreo: data drift y reentrenamiento mensual.
+
+---
+
+## Licencia
+
+MIT – uso libre con atribución.
+
+## Contacto
+
+Cristian Emanuel Campos Fuentes – cristianemanuelcamposfuentes@hotmail.com
+ – [LinkedIn](https://www.linkedin.com/in/cristian-emanuel-campos-fuentes/)
