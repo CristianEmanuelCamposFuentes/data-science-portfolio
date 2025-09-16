@@ -1,6 +1,7 @@
 # ds-i-metacritic · EDA de Videojuegos (Metacritic)
 
-Análisis exploratorio para entender cómo varían las puntuaciones de **usuarios** y **críticos**, y qué patrones aparecen por plataforma, género y año.
+Análisis exploratorio para entender cómo varían las puntuaciones de **usuarios** y **críticos**, y qué patrones aparecen por plataforma, género y año.  
+Primer proyecto del portfolio de Data Science (curso DS I).
 
 [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1G7AOSqC__0ZdLgQukFz7aPO9bBeicFIV)
 
@@ -40,22 +41,47 @@ Análisis exploratorio para entender cómo varían las puntuaciones de **usuario
 
 ---
 
-## Dataset
+## 📁 Estructura rápida
+- `notebooks/` → notebook principal (EDA + primeros modelos).
+- `data/` → `dataset_metacritic_2025.csv` (limpiado para uso educativo).
+- `figures/` → imágenes usadas en este README.
 
-- Archivo: `data/dataset_metacritic_2025.csv`  
-- Fuente: compendio público (curado para el curso).  
-- Principales campos: `title`, `platform`, `genres`, `metascore`, `userScore`, recuentos de reseñas por tipo, año de lanzamiento.
+---
+
+
+## 🗂️ Dataset
+- **Fuente:** compendio público (curado para el curso).
+- **Tamaño:** ~13.4k juegos, ~20 variables clave.
+- **Campos principales:** `title`, `platform`, `genres`, `metascore`, `userScore`, recuentos de reseñas por tipo, año de lanzamiento.
+
 
 > El dataset fue limpiado para uso educativo.
 
 ---
 
-## Highlights del EDA
+## ✨ Hallazgos (highlights)
+- **Distribuciones:** `userScore` concentra valores altos (≈7–8), con cierta asimetría.
+- **Correlaciones:** fuertes relaciones entre reseñas positivas/negativas/neutral (consistentes entre sí).
+- **Plataformas/géneros:** algunas plataformas concentran más títulos con puntajes altos (posible sesgo de catálogo/audiencia).
+- **Usuarios vs críticos:** correlación moderada; no siempre coinciden (*útil para producto/marketing*).
 
-- **Distribuciones**: userScore muestra picos cercanos a 7–8 (tendencia a calificaciones positivas).  
-- **Correlación**: fuertes relaciones entre recuentos de reseñas positivas/negativas/neutral (tienen sentido operacional).  
-- **Diferencias por plataforma/género**: algunas plataformas concentran más títulos con puntajes altos (indicio de sesgo de catálogo y preferencia de audiencia).  
-- **Parejas clave**: `metascore` vs `userScore` exhibe correlación moderada – públicos y críticos no siempre coinciden.
+---
+
+## 🤖 Modelado (baseline rápido)
+> **Objetivo:** predecir `userScore` (0–10) a partir de plataforma, género, reseñas y metadatos numéricos.
+
+Modelos probados:
+- `LinearRegression`, `RandomForestRegressor`, `KNeighborsRegressor`,  
+  `DecisionTreeRegressor`, `GradientBoostingRegressor`, `XGBRegressor`.
+
+**Validación:** `cross_val_score` (cv=5, métrica R²).  
+> Nota: los resultados iniciales son altos; en próximas iteraciones se reforzará el control de **data leakage** (codificación/selección de features y separación temporal).
+
+**Próximos pasos de ML**
+- Ingeniería de features (año → década, géneros one-hot, bins de metascore).
+- Pipeline con `ColumnTransformer` + `OneHotEncoder` + escalado solo donde aplique.
+- Métricas adicionales: MAE/RMSE y curva de residuos por modelo.
+- Exportar 2–3 figuras de modelos (ej.: `real_vs_pred`, `residuos_rf`, `cv_boxplot`) a `figures/` y agregarlas arriba.
 
 ---
 
@@ -66,11 +92,13 @@ pip install -U pandas numpy matplotlib seaborn
 # abrir notebooks/ProyectoDS1ParteIII...ipynb
 o Colab desde el badge de arriba.
 ```
+---
 
-## Próximos pasos
+## Licencia
 
-- Feature engineering (año → década, géneros one-hot, bins de metascore).
+MIT – uso libre con atribución.
 
-- Baselines de ML (regresión para metascore, clasificación para “top tier”).
+## Contacto
 
-- Control de fuga de datos y validación temporal.
+Cristian Emanuel Campos Fuentes – cristianemanuelcamposfuentes@hotmail.com
+ – [LinkedIn](https://www.linkedin.com/in/cristian-emanuel-campos-fuentes/)
