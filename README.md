@@ -11,7 +11,8 @@ Portafolio vivo de proyectos de **Data Science**. Aquí voy a ir subiendo EDA, p
 | Proyecto | Área | Notebook | Estado |
 |---|---|---|---|
 | **ds-i-metacritic** | Entretenimiento (Videojuegos) | [Abrir en Colab](https://colab.research.google.com/drive/1G7AOSqC__0ZdLgQukFz7aPO9bBeicFIV) | ✅ Entregado (EDA) |
-| **ds-ii-logistics** | Logística y Supply Chain | [Abrir en Colab](https://colab.research.google.com/drive/1cIB7p3tVn1HH61mm6IT4WqtrNZQqme-A) | 🔄 EDA iterando |
+| **ds-ii-logistics** | Logística y Supply Chain | [Abrir en Colab](https://colab.research.google.com/drive/1cIB7p3tVn1HH61mm6IT4WqtrNZQqme-A) | ✅ Entregado (EDA) |
+| ds-iii-nlp-metacritic | NLP & Clasificación     | [Abrir en Colab](https://colab.research.google.com/drive/10EFJuwidO54S-3NGYneihxYFEJeVzJr7)         | ✅ Entregado (EDA)   |
 
 > Más proyectos se irán sumando (ML básico, pruebas de modelos, y dashboards).
 
@@ -80,4 +81,5 @@ MIT – uso libre con atribución.
 
 Cristian Emanuel Campos Fuentes – cristianemanuelcamposfuentes@hotmail.com
  – [LinkedIn](https://www.linkedin.com/in/cristian-emanuel-campos-fuentes/)
+
 
