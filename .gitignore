@@ -1,9 +1,25 @@
 # general
 *.ipynb_checkpoints/
 .DS_Store
-.env
+
 # datos grandes
 *.zip
 *.tar
 *.parquet
 data/**/raw/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_conv/
+**/.DS_Store
+
+# Datos pesados y temporales
+**/data/*
+!**/data/README.md
+**/artifacts/*.pickle
+**/artifacts/*.pkl
+**/artifacts/*.joblib
+
+# Entornos/otros
+.env
+*.log
